@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="w-50">
+            <!-- Bài 1 : Quản lý tuyển sinh -->
+            <h2>Quản lý tuyển sinh</h2>
+            <form>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="Nhập điểm chuẩn" id="inputDiemChuan">
+                </div>
+                <select class="form-control" id="selectKV">
+                    <option value="0">Chọn Khu Vực</option>
+                    <option value="2">Khu Vực A</option>
+                    <option value="1">Khu Vực B</option>
+                    <option value="0.5">Khu Vực C</option>
+                </select>
+                <select class="form-control" id="selectDT">
+                    <option value="0">Chọn Đối Tượng</option>
+                    <option value="2.5">Đối tượng 1</option>
+                    <option value="1.5">Đối tượng 2</option>
+                    <option value="1">Đối tượng 3</option>
+                </select>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="Điểm môn thứ 1" id="inputDiem1">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="Điểm môn thứ 2" id="inputDiem2">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="Điểm môn thứ 3" id="inputDiem3">
+                </div>
+                <button id="btnBai1" type="button" class="btn btn-primary">Submit</button>
+                <p class="alert alert-success" id="txtBai1" class=></p>
+            </form>
+
+
+
+            <!-- Tính Tiền Điện -->
+            <h2>Tính tiền điện</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Nhập họ tên" id="inputHoTen_Bai2">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="Nhập số KW" id="inputKW">
+                </div>
+                <button id="btnBai2" type="button" class="btn btn-primary">Submit</button>
+                <p class="alert alert-success" id="txtBai2" class=></p>
+            </form>
+
+
+            
+            <!-- Tính Thuế Thu Nhập Cá Nhân -->
+            <h2>Tính thuế thu nhập cá nhân</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Nhập họ tên" id="inputHoTen_Bai3">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="Tổng thu nhập năm" id="inputSoTien">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="Số người phụ thuộc" id="inputSoNguoi">
+                </div>
+                <button id="btnBai3" type="button" class="btn btn-primary">Submit</button>
+                <p class="alert alert-success" id="txtBai3" class=></p>
+            </form>
+
+
+
+            <!-- Tính tiền cáp -->
+            <h2>Tính tiền cáp</h2>
+            <form>
+                <select class="form-control" id="selectKhachHang" onchange="showInput()" >
+                    <option value="">Chọn loại khách hàng</option>
+                    <option value="danCu">Dân Cư</option>
+                    <option value="doanhNghiep" >Doanh Nghiệp</option>
+                </select>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Nhập mã khách hàng" id="inputMaKhachHang">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="Nhập số kênh cao cấp" id="inputSoKenh">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="Nhập số kết nối" id="inputSoKetNoi" style="display: none;">
+                </div>
+                <button onclick="tinhTienCap()" id="btnBai4" type="button" class="btn btn-primary">Submit</button>
+                <p class="alert alert-success" id="txtBai4" class=></p>
+            </form>
+
+
+
+
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="./js/Baitap1.js"></script>
+    <script src="./js/Baitap2.js"></script>
+    <script src="./js/Baitap3.js"></script>
+    <script src="./js/Baitap4.js"></script>
+</body>
+
+</html>
